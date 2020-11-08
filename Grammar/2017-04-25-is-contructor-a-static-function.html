@@ -1,0 +1,947 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>构造器是静态方法吗？ · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="windmissing">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex-plus/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-click-reveal/click_reveal.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2017-03-17-thinking-in-java-record.html" />
+    
+    
+    <link rel="prev" href="2017-01-04-java-interface-and-abstract-class.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"windmissing/java_notes","types":["star","watch","fork"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Grammar
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="2017-01-03-java-extends-and-implement.html">
+            
+                <a href="2017-01-03-java-extends-and-implement.html">
+            
+                    
+                    extends与implement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="2017-01-04-java-interface-and-abstract-class.html">
+            
+                <a href="2017-01-04-java-interface-and-abstract-class.html">
+            
+                    
+                    interface与abstract class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="2017-04-25-is-contructor-a-static-function.html">
+            
+                <a href="2017-04-25-is-contructor-a-static-function.html">
+            
+                    
+                    构造器是静态方法吗？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="2017-03-17-thinking-in-java-record.html">
+            
+                <a href="2017-03-17-thinking-in-java-record.html">
+            
+                    
+                    《thinking in JAVA》片断记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="2017-03-23-thinking-in-java-record-2.html">
+            
+                <a href="2017-03-23-thinking-in-java-record-2.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (二)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="2017-03-23-thinking-in-java-record-3.html">
+            
+                <a href="2017-03-23-thinking-in-java-record-3.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (三)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="2017-04-12-thinking-in-java-record-4.html">
+            
+                <a href="2017-04-12-thinking-in-java-record-4.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (四)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="2017-04-18-thinking-in-java-record-5.html">
+            
+                <a href="2017-04-18-thinking-in-java-record-5.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (五)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="2017-04-27-thinking-in-java-record-6.html">
+            
+                <a href="2017-04-27-thinking-in-java-record-6.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (六)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="2017-05-04-thinking-in-java-record-7.html">
+            
+                <a href="2017-05-04-thinking-in-java-record-7.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (七)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="2017-05-26-thinking-in-java-record-8.html">
+            
+                <a href="2017-05-26-thinking-in-java-record-8.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (八)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="2017-05-27-thinking-in-java-record-9.html">
+            
+                <a href="2017-05-27-thinking-in-java-record-9.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (九)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="2017-05-28-thinking-in-java-record-10.html">
+            
+                <a href="2017-05-28-thinking-in-java-record-10.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (十)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="2017-05-29-thinking-in-java-record-11.html">
+            
+                <a href="2017-05-29-thinking-in-java-record-11.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (十一)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="2017-05-30-thinking-in-java-record-12.html">
+            
+                <a href="2017-05-30-thinking-in-java-record-12.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (十二)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="2017-08-01-thinking-in-java-record-13.html">
+            
+                <a href="2017-08-01-thinking-in-java-record-13.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (十三)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="2017-08-03-thinking-in-java-record-14.html">
+            
+                <a href="2017-08-03-thinking-in-java-record-14.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (十四)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    设计模型
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../DesignPattern/2016-08-26-java-singleton.html">
+            
+                <a href="../DesignPattern/2016-08-26-java-singleton.html">
+            
+                    
+                    【转】JAVA设计模式之单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../DesignPattern/2016-09-30-adapter-java.html">
+            
+                <a href="../DesignPattern/2016-09-30-adapter-java.html">
+            
+                    
+                    JAVA设计模式之适配器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../DesignPattern/2016-10-08-java-facade.html">
+            
+                <a href="../DesignPattern/2016-10-08-java-facade.html">
+            
+                    
+                    JAVA设计模之外观模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../DesignPattern/2016-10-09-java-observer.html">
+            
+                <a href="../DesignPattern/2016-10-09-java-observer.html">
+            
+                    
+                    JAVA设计模之观察者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Libs
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Libs/2017-02-15-java-jackson.html">
+            
+                <a href="../Libs/2017-02-15-java-jackson.html">
+            
+                    
+                    JAVA json解析工具 - Jackson
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Framework
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Framework/2016-08-17-SpringMVC-introduction.html">
+            
+                <a href="../Framework/2016-08-17-SpringMVC-introduction.html">
+            
+                    
+                    SpringMVC处理请求的流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Framework/2016-08-23-sprint-ioc.html">
+            
+                <a href="../Framework/2016-08-23-sprint-ioc.html">
+            
+                    
+                    spring framework中的IOC技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    从JAVA到C++
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Java2Cpp/2017-03-13-from-java-to-c-c++.html">
+            
+                <a href="../Java2Cpp/2017-03-13-from-java-to-c-c++.html">
+            
+                    
+                    从JAVA到C++ --- 快速上手篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Java2Cpp/2017-03-14-java-to-cpp-on-memory.html">
+            
+                <a href="../Java2Cpp/2017-03-14-java-to-cpp-on-memory.html">
+            
+                    
+                    从JAVA到C++（一） - 内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Java2Cpp/2017-03-20-memory-management-in-java.html">
+            
+                <a href="../Java2Cpp/2017-03-20-memory-management-in-java.html">
+            
+                    
+                    JAVA内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >构造器是静态方法吗？</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x539F;&#x6587;&#x94FE;&#x63A5;&#xFF1A;<a href="http://rednaxelafx.iteye.com/blog/652719" target="_blank">link</a>  </p>
+<p>&#x300A;thinking in JAVA&#x300B;P96&#x4E2D;&#x5199;&#x9053;&#xFF1A;  </p>
+<blockquote>
+<p>&#x6784;&#x9020;&#x5668;&#x5B9E;&#x9645;&#x4E0A;&#x4E5F;&#x662F;&#x9759;&#x6001;&#x65B9;&#x6CD5;  </p>
+</blockquote>
+<p>&#x5BF9;&#x6B64;&#x767E;&#x601D;&#x4E0D;&#x89E3;&#xFF0C;&#x4E8E;&#x662F;&#x4ECE;&#x7F51;&#x4E0A;&#x627E;&#x5230;&#x4E86;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x3002;</p>
+<!-- more -->
+<hr>
+<p>&#x5982;&#x9898;&#x3002;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x7684;&#x7B54;&#x6848;&#x8981;&#x770B;&#x4F60;&#x5FC3;&#x4E2D;&#x7684;&#x201C;&#x9759;&#x6001;&#x201D;&#x6307;&#x4EE3;&#x4E86;&#x4EC0;&#x4E48;&#x3002; </p>
+<p>&#x770B;&#x5230;&#x6700;&#x8FD1;&#x5728;&#x8BBA;&#x575B;&#x7684;&#x4E00;&#x5E16;&#xFF1A;<br><strong>renpeng301 &#x5199;&#x9053;</strong>  </p>
+<blockquote>
+<p>&#x5982;&#x679C;&#x4E0D;&#x719F;&#x6089;JVM&#x6307;&#x4EE4;&#xFF0C;&#x770B;&#x5230;&#x8FD9;&#x4E9B;&#x4E1C;&#x897F;&#x786E;&#x5B9E;&#x96BE;&#x4EE5;&#x7406;&#x89E3;&#xB7;&#xB7;&#xB7;&#x5F88;&#x76F4;&#x89C2;&#x7684;&#x770B;&#x5230;Test&#x9ED8;&#x8BA4;&#x4E3A;&#x7EE7;&#x627F;&#x81EA;Object&#x8FD9;&#x4E2A;JAVA&#x4E2D;&#x7684;&#x8D85;&#x7EA7;&#x7236;&#x7C7B;&#xFF0C;&#x5F53;new Test()&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8C03;&#x7528;Test&#x7684;&#x9ED8;&#x8BA4;&#x6784;&#x9020;&#x5668;&#xFF0C;&#x6784;&#x9020;&#x5668;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x9759;&#x6001;&#x7684;&#x65B9;&#x6CD5;&#xFF08;&#x8FD9;&#x6837;&#x8BF4;&#x5E94;&#x8BE5;&#x6CA1;&#x9519;&#x5427;&#xFF1F;&#xFF09;</p>
+</blockquote>
+<p>&#x60F3;&#x8D77;&#x4EE5;&#x524D;<a href="http://www.iteye.com/problems/14154" target="_blank">&#x5728;JavaEye&#x95EE;&#x7B54;&#x9891;&#x9053;&#x89C1;&#x8FC7;&#x7684;&#x7C7B;&#x4F3C;&#x95EE;&#x9898;</a>&#xFF0C;&#x770B;&#x6765;&#x8FD9;&#x201C;&#x9759;&#x6001;&#x201D;&#x6709;&#x4E00;&#x5B9A;&#x8FF7;&#x60D1;&#x6027;&#x7684;&#x3002;   </p>
+<p>&#x5728;Java&#x4E2D;&#xFF0C;&#x201C;static&#x201D;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#x610F;&#x601D;&#xFF0C;&#x5BF9;&#x65B9;&#x6CD5;&#x800C;&#x8A00;&#xFF0C;&#x81F3;&#x5C11;&#x5305;&#x62EC;&#x4E0B;&#x9762;&#x4E24;&#x70B9;&#xFF1A;<br>1&#x3001;Java&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x201C;static&#x201D;&#x5173;&#x952E;&#x5B57;&#x7528;&#x4E8E;&#x4FEE;&#x9970;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x8868;&#x793A;&#x201C;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x201D;&#xFF0C;&#x4E0E;&#x201C;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#x201D;&#x76F8;&#x5BF9;&#x3002;<br>2&#x3001;&#x5728;&#x8BA8;&#x8BBA;&#x65B9;&#x6CD5;&#x7684;&#x5177;&#x4F53;&#x8C03;&#x7528;&#x76EE;&#x6807;&#x65F6;&#xFF0C;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x5230;&#x5E95;&#x80FD;&#x5426;&#x5728;&#x8FD0;&#x884C;&#x524D;&#x5C31;&#x786E;&#x5B9A;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x7684;&#x76EE;&#x6807;&#xFF0C;&#x662F;&#x5219;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x201C;&#x9759;&#x6001;&#x7ED1;&#x5B9A;&#x201D;&#xFF08;static binding&#xFF09;&#xFF0C;&#x5426;&#x5219;&#x9700;&#x8981;&#x505A;&#x201C;&#x8FD0;&#x884C;&#x65F6;&#x7ED1;&#x5B9A;&#x201D;&#xFF08;runtime binding&#xFF09;&#x3002;&#x8FD9;&#x4E0E;&#x201C;static&#x201D;&#x5173;&#x952E;&#x5B57;&#x4E0D;&#x662F;&#x4E00;&#x56DE;&#x4E8B;&#x3002;   </p>
+<p>=========================================================================== </p>
+<p>&#x5148;&#x770B;&#x770B;&#x7B2C;&#x4E00;&#x70B9;&#xFF0C;Java&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x201C;static&#x201C;&#x5173;&#x952E;&#x5B57;&#x4FEE;&#x9970;&#x7684;&#x65B9;&#x6CD5;&#x3002;  </p>
+<p>&#x6839;&#x636E;Java&#x8BED;&#x8A00;&#x89C4;&#x8303;&#x7B2C;&#x4E09;&#x7248;&#xFF0C;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x7684;&#x89C4;&#x5B9A;&#x4E3A;&#xFF1A;<br><strong>Java Language Specification, 3rd &#x5199;&#x9053;</strong>  </p>
+<blockquote>
+<p><strong>8.4.3.2 static Methods</strong>   </p>
+<font color="red">A method that is declared static is called a class method. A class method is always invoked without reference to a particular object.</font> An attempt to reference the current object using the keyword this or the keyword super or to reference the type parameters of any surrounding declaration in the body of a class method results in a compile-time error. It is a compile-time error for a static method to be declared abstract. 
+
+<font color="blue">A method that is not declared static is called an instance method, and sometimes called a non-static method. An instance method is always invoked with respect to an object, which becomes the current object to which the keywords this and super refer during execution of the method body.</font>
+
+</blockquote>
+<p>&#x6CE8;&#x610F;&#x5230;&#x89C4;&#x8303;&#x4E2D;&#x5173;&#x4E8E;&#x201C;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x201D;&#xFF08;&#x7EA2;&#x8272;&#x90E8;&#x5206;&#xFF09;&#x4E0E;&#x201C;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#x201D;&#xFF08;&#x84DD;&#x8272;&#x90E8;&#x5206;&#xFF09;&#x7684;&#x5B9A;&#x4E49;&#x3002;&#x4E24;&#x8005;&#x7684;&#x5173;&#x952E;&#x5DEE;&#x5F02;&#x5728;&#x4E8E;&#xFF1A;&#x201C;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x201D;&#x7684;&#x8C03;&#x7528;&#x603B;&#x662F;&#x4E0D;&#x6307;&#x5B9A;&#x67D0;&#x4E2A;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x4E3A;&#x201C;&#x63A5;&#x6536;&#x8005;&#x201D;&#xFF0C;&#x800C;&#x201C;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#x201D;&#x5219;&#x603B;&#x662F;&#x8981;&#x4EE5;&#x67D0;&#x4E2A;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x4E3A;&#x201C;&#x63A5;&#x6536;&#x8005;&#x201D;&#xFF08;receiver&#xFF09;&#x3002; </p>
+<p>&#x7528;Java&#x7684;&#x8BED;&#x6CD5;&#x6765;&#x6F14;&#x793A;&#x3002; </p>
+<p>&#x8C03;&#x7528;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#xFF0C;&#x4ECE;&#x8C03;&#x7528;&#x8005;&#x7684;&#x4E00;&#x65B9;&#x770B;&#xFF0C;&#x201C;&#x63A5;&#x6536;&#x8005;&#x201D;&#x5C31;&#x662F;<code>.</code>&#x4E4B;&#x524D;&#x7684;&#x90A3;&#x4E2A;&#x53D8;&#x91CF;&#x6240;&#x5F15;&#x7528;&#x7684;&#x5BF9;&#x8C61;&#xFF1A; </p>
+<pre><code class="lang-java">receiver.instanceMethod(args)
+</code></pre>
+<p>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x88AB;&#x88AB;&#x8C03;&#x7528;&#x8005;&#x4E0E;&#x8C03;&#x7528;&#x8005;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x7C7B;&#x4E2D;&#xFF0C;&#x90A3;&#x4E48;receiver&#x53EF;&#x4EE5;&#x7701;&#x7565;&#x4E0D;&#x5199;&#xFF0C;&#x7531;&#x7F16;&#x8BD1;&#x5668;&#x5224;&#x65AD;&#x51FA;&#x201C;&#x63A5;&#x6536;&#x8005;&#x201D;&#x662F;this&#x3002; </p>
+<p>&#x4ECE;&#x88AB;&#x8C03;&#x7528;&#x7684;&#x4E00;&#x65B9;&#x770B;&#xFF0C;&#x201C;&#x63A5;&#x6536;&#x8005;&#x201D;&#x5C31;&#x662F;&#x5728;&#x65B9;&#x6CD5;&#x4E2D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7684;&#x4F2A;&#x53D8;&#x91CF;&#x201C;this&#x201D;&#xFF1A; </p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">instanceMethod</span><span class="hljs-params">(Object... args)</span> </span>{  
+    <span class="hljs-comment">// &#x6CE8;&#x610F;&#x201C;this&#x201D;  </span>
+    System.out.println(<span class="hljs-keyword">this</span>);  
+}
+</code></pre>
+<p>&#x201C;this&#x201D;&#x5E76;&#x6CA1;&#x6709;&#x51FA;&#x73B0;&#x5728;&#x53C2;&#x6570;&#x5217;&#x8868;&#x4E2D;&#xFF0C;&#x4F46;&#x5B83;&#x5B9E;&#x9645;&#x4E0A;&#x505A;&#x4F5C;&#x4E3A;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x7684;&#x4E00;&#x4E2A;&#x9690;&#x5F0F;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x7684;&#x3002; </p>
+<p>&#x8C03;&#x7528;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x5219;&#x4E0D;&#x9700;&#x8981;&#x3001;&#x65E0;&#x6CD5;&#x6307;&#x5B9A;&#x4E5F;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;receiver&#x3002;Java&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x7C7B;&#x4E0D;&#x662F;&#x5BF9;&#x8C61;&#xFF0C;&#x6240;&#x4EE5;&#x901A;&#x8FC7;ClassName.aStaticMethod(args)&#x7684;&#x65B9;&#x5F0F;&#x53BB;&#x8C03;&#x7528;&#x4E00;&#x4E2A;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;<code>.</code>&#x524D;&#x9762;&#x7684;&#x5E76;&#x4E0D;&#x662F;receiver&#x3002;&#x5982;&#x679C;<code>.</code>&#x524D;&#x9762;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x67D0;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x7684;&#x53D8;&#x91CF;&#x800C;<code>.</code>&#x540E;&#x9762;&#x6307;&#x5B9A;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#xFF0C;&#x5219;&#x5B9E;&#x9645;&#x4E0A;&#x90A3;&#x4E2A;&#x53D8;&#x91CF;&#x5E76;&#x6CA1;&#x6709;&#x88AB;&#x4F5C;&#x4E3A;receiver&#x4F7F;&#x7528;&#xFF0C;&#x53EA;&#x662F;&#x4E2A;&#x8C03;&#x7528;&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;&#x4E0A;&#x58F0;&#x660E;&#x7684;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x7684;&#x8BED;&#x6CD5;&#x7CD6;&#x800C;&#x5DF2;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF1A; </p>
+<pre><code class="lang-java">aVariable.aStaticMethod(args)
+</code></pre>
+<p>&#x5B9E;&#x9645;&#x4E0A;&#x7B49;&#x6548;&#x4E8E;&#xFF1A; </p>
+<pre><code class="lang-java">TheClass.aStaticMethod(args)
+</code></pre>
+<p>&#x5173;&#x4E8E;&#x201C;this&#x201D;&#x7684;&#x89C4;&#x5B9A;&#xFF0C;Java&#x8BED;&#x8A00;&#x89C4;&#x8303;&#x7B2C;&#x4E09;&#x7248;&#x5982;&#x662F;&#x8BF4;&#xFF1A;<br><strong>Java Language Specification, 3rd &#x5199;&#x9053;</strong>  </p>
+<blockquote>
+<p><strong>15.8.3 this</strong>  </p>
+<p><font color="red">The keyword this may be used only in the body of an instance method, instance initializer or constructor, or in the initializer of an instance variable of a class.<font> If it appears anywhere else, a compile-time error occurs.  </font></font></p>
+</blockquote>
+<p>&#x5F88;&#x660E;&#x663E;&#xFF0C;&#x5728;&#x6784;&#x9020;&#x5668;&#x4E2D;&#x662F;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x201C;this&#x201D;&#x7684;&#xFF1B;&#x5B9E;&#x4F8B;&#x521D;&#x59CB;&#x5316;&#x5668;&#x4E0E;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x521D;&#x59CB;&#x5316;&#x5668;&#x5728;&#x7F16;&#x8BD1;&#x65F6;&#x4F1A;&#x4E0E;&#x6784;&#x9020;&#x5668;&#x4E00;&#x8D77;&#x88AB;&#x6536;&#x96C6;&#x5230;<code>&lt;init&gt;()</code>&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x5B83;&#x4EEC;&#x4E5F;&#x90FD;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x201C;this&#x201D;&#x3002;&#x6240;&#x4EE5;&#x4ECE;Java&#x8BED;&#x8A00;&#x7684;&#x201C;static&#x201D;&#x5173;&#x952E;&#x5B57;&#x7684;&#x89D2;&#x5EA6;&#x770B;&#xFF0C;&#x5B9E;&#x4F8B;&#x6784;&#x9020;&#x5668;&#x4E0D;&#x662F;&#x201C;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x201D;&#x3002; </p>
+<hr>
+<p>Java&#x8BED;&#x8A00;&#x901A;&#x5E38;&#x662F;&#x7F16;&#x8BD1;&#x4E3A;class&#x6587;&#x4EF6;&#x540E;&#x7531;Java&#x865A;&#x62DF;&#x673A;&#x6765;&#x8FD0;&#x884C;&#x7684;&#x3002;&#x5728;Java&#x865A;&#x62DF;&#x673A;&#x89C4;&#x8303;&#x7B2C;&#x4E8C;&#x7248;&#x4E2D;&#xFF0C;&#x6709;&#x8FD9;&#x6837;&#x7684;&#x63CF;&#x8FF0;&#xFF1A;<br><strong>Java virtual machine specification, 2nd &#x5199;&#x9053;</strong>  </p>
+<blockquote>
+<p>3.6.1 Local Variables  </p>
+<p>Each frame (&#xA7;3.6) contains an array of variables known as its local variables. The length of the local variable array of a frame is determined at compile time and supplied in the binary representation of a class or interface along with the code for the method associated with the frame (&#xA7;4.7.3). 
+A single local variable can hold a value of type boolean, byte, char, short, int, float, reference, or returnAddress. A pair of local variables can hold a value of type long or double. </p>
+<p>Local variables are addressed by indexing. The index of the first local variable is zero. An integer is be considered to be an index into the local variable array if and only if that integer is between zero and one less than the size of the local variable array. </p>
+<p>A value of type long or type double occupies two consecutive local variables. Such a value may only be addressed using the lesser index. For example, a value of type double stored in the local variable array at index n actually occupies the local variables with indices n and n +1; however, the local variable at index n +1 cannot be loaded from. It can be stored into. However, doing so invalidates the contents of local variable n. </p>
+<p>The Java virtual machine does not require n to be even. In intuitive terms, values of types double and long need not be 64-bit aligned in the local variables array. Implementors are free to decide the appropriate way to represent such values using the two local variables reserved for the value. </p>
+<p>The Java virtual machine uses local variables to pass parameters on method invocation. <font color="red">On class method invocation any parameters are passed in consecutive local variables starting from local variable 0.</font> <font color="blue">On instance method invocation, local variable 0 is always used to pass a reference to the object on which the instance method is being invoked (<strong>this</strong> in the Java programming language). Any parameters are subsequently passed in consecutive local variables starting from local variable 1.<font></font></font></p>
+</blockquote>
+<p>3.6.1&#x5C0F;&#x8282;&#x7684;&#x6700;&#x540E;&#x4E00;&#x6BB5;&#x63D0;&#x5230;&#x4E86;&#x201C;&#x7C7B;&#x65B9;&#x6CD5;&#x201D;&#xFF08;&#x201C;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x201D;&#xFF09;&#x4E0E;&#x201C;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#x201D;&#x5728;&#x6982;&#x5FF5;&#x4E2D;&#x7684;JVM&#x4E0A;&#x7684;&#x533A;&#x522B;&#xFF1A;&#x5728;&#x8C03;&#x7528;&#x7C7B;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x6240;&#x6709;&#x53C2;&#x6570;&#x6309;&#x987A;&#x5E8F;&#x5B58;&#x653E;&#x4E8E;&#x88AB;&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#x7684;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x533A;&#x4E2D;&#x7684;&#x8FDE;&#x7EED;&#x533A;&#x57DF;&#xFF0C;&#x4ECE;&#x5C40;&#x90E8;&#x53D8;&#x91CF;0&#x5F00;&#x59CB;&#xFF1B;&#x5728;&#x8C03;&#x7528;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x5C40;&#x90E8;&#x53D8;&#x91CF;0&#x7528;&#x4E8E;&#x5B58;&#x653E;&#x4F20;&#x5165;&#x7684;&#x8BE5;&#x65B9;&#x6CD5;&#x6240;&#x5C5E;&#x7684;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#xFF08;Java&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x201C;this&#x201D;&#xFF09;&#xFF0C;&#x6240;&#x6709;&#x53C2;&#x6570;&#x4ECE;&#x5C40;&#x90E8;&#x53D8;&#x91CF;1&#x5F00;&#x59CB;&#x5B58;&#x653E;&#x5728;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x533A;&#x7684;&#x8FDE;&#x7EED;&#x533A;&#x57DF;&#x4E2D;&#x3002;<br>&#x4ECE;&#x6548;&#x679C;&#x4E0A;&#x770B;&#xFF0C;&#x8FD9;&#x5C31;&#x7B49;&#x4E8E;&#x5728;&#x8C03;&#x7528;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#x65F6;&#x603B;&#x662F;&#x628A;&#x201C;this&#x201D;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x88AB;&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#x3002;  </p>
+<p>&#x5728;&#x5173;&#x4E8E;&#x65B9;&#x6CD5;&#x63CF;&#x8FF0;&#x7B26;&#x7684;&#x90E8;&#x5206;&#xFF1A;<br><strong>Java virtual machine specification, 2nd &#x5199;&#x9053;</strong> </p>
+<blockquote>
+<p><strong>4.3.3 Method Descriptors </strong>  </p>
+<p>&#xFF08;... &#x7701;&#x7565;&#xFF09; </p>
+<p>For example, the method descriptor for the method </p>
+<pre><code>Object mymethod(int i, double d, Thread t) 
+</code></pre><p>is 
+    (IDLjava/lang/Thread;)Ljava/lang/Object; 
+Note that internal forms of the fully qualified names of Thread and Object are used in the method descriptor.<br>The method descriptor for mymethod is the same whether mymethod is a class or an instance method. <font color="blue">Although an instance method is passed this, a reference to the current class instance, in addition to its intended parameters, that fact is not reflected in the method descriptor.<font> <font color="red">(A reference to this is not passed to a class method.)<font> <font color="blue">The reference to this is passed implicitly by the method invocation instructions of the Java virtual machine used to invoke instance methods.<font></font></font></font></font></font></font></p>
+</blockquote>
+<p>&#x8FD9;&#x91CC;&#x63D0;&#x5230;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x65E0;&#x8BBA;&#x662F;&#x7C7B;&#x65B9;&#x6CD5;&#x8FD8;&#x662F;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#xFF0C;&#x5176;&#x65B9;&#x6CD5;&#x63CF;&#x8FF0;&#x7B26;&#x90FD;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;&#x201C;this&#x201D;&#x4F5C;&#x4E3A;&#x8C03;&#x7528;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#x7684;&#x4E00;&#x4E2A;&#x9690;&#x5F0F;&#x53C2;&#x6570;&#xFF0C;&#x4E0D;&#x4F1A;&#x53CD;&#x6620;&#x5728;&#x65B9;&#x6CD5;&#x63CF;&#x8FF0;&#x7B26;&#x4E2D;&#x3002; </p>
+<p>=========================================================================== </p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x770B;&#x7B2C;&#x4E8C;&#x70B9;&#xFF0C;&#x5173;&#x4E8E;&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#x65F6;&#x9009;&#x62E9;&#x5177;&#x4F53;&#x7684;&#x76EE;&#x6807;&#x7684;&#x201C;static&#x201D;&#x3002; </p>
+<p>Java&#x8BED;&#x8A00;&#x4E2D;&#xFF0C;&#x865A;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8986;&#x5199;&#xFF08;override&#xFF09;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x5B9E;&#x73B0;<a href="http://en.wikipedia.org/wiki/Subtype_polymorphism" target="_blank">&#x5B50;&#x7C7B;&#x578B;&#x591A;&#x6001;&#xFF08;subtype polymorphism&#xFF09;</a>&#x3002;Java&#x8BED;&#x8A00;&#x652F;&#x6301;&#x4E09;&#x79CD;&#x591A;&#x6001;&#xFF0C;&#x9664;&#x4E86;&#x5B50;&#x7C7B;&#x578B;&#x591A;&#x6001;&#x5916;&#x8FD8;&#x6709;&#x901A;&#x8FC7;&#x65B9;&#x6CD5;&#x91CD;&#x8F7D;&#x652F;&#x6301;&#x7684;<a href="http://en.wikipedia.org/wiki/Parametric_polymorphism#Parametric_polymorphism" target="_blank">ad-hoc&#x591A;&#x6001;&#xFF08;ad-hoc polymorphism&#xFF09;</a>&#x4E0E;&#x901A;&#x8FC7;&#x6CDB;&#x578B;&#x652F;&#x6301;&#x7684;<a href="http://en.wikipedia.org/wiki/Parametric_polymorphism#Parametric_polymorphism" target="_blank">&#x53C2;&#x6570;&#x5316;&#x591A;&#x6001;&#xFF08;parametric polymorphism&#xFF09;</a>&#x3002;&#x5728;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7F16;&#x7A0B;&#x7684;&#x8BED;&#x5883;&#x91CC;&#x201C;&#x591A;&#x6001;&#x201D;&#x4E00;&#x822C;&#x6307;&#x5B50;&#x7C7B;&#x578B;&#x591A;&#x6001;&#xFF0C;&#x4E0B;&#x9762;&#x63D0;&#x5230;&#x201C;&#x591A;&#x6001;&#x201D;&#x4E00;&#x8BCD;&#x4E5F;&#x7279;&#x5B9A;&#x6307;&#x5B50;&#x7C7B;&#x578B;&#x591A;&#x6001;&#x3002;  </p>
+<p>Java&#x8BED;&#x8A00;&#x4E2D;&#x975E;&#x865A;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x201C;&#x9759;&#x6001;&#x7ED1;&#x5B9A;&#x201D;&#xFF08;static binding&#xFF09;&#x6216;&#x8005;&#x53EB;&#x201C;&#x65E9;&#x7ED1;&#x5B9A;&#x201D;&#xFF08;early binding&#xFF09;&#x6765;&#x9009;&#x62E9;&#x5B9E;&#x9645;&#x7684;&#x8C03;&#x7528;&#x76EE;&#x6807;&#x2014;&#x2014;&#x56E0;&#x4E3A;&#x65E0;&#x6CD5;&#x8986;&#x5199;&#xFF0C;&#x65E0;&#x6CD5;&#x4EA7;&#x751F;&#x591A;&#x6001;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x4E8E;&#x662F;&#x53EF;&#x80FD;&#x7684;&#x8C03;&#x7528;&#x76EE;&#x6807;&#x603B;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#x4E00;&#x4E2A;&#x3002;&#x865A;&#x65B9;&#x6CD5;&#x5219;&#x4E00;&#x822C;&#x9700;&#x8981;&#x7B49;&#x5230;&#x8FD0;&#x884C;&#x65F6;&#x6839;&#x636E;&#x201C;&#x63A5;&#x6536;&#x8005;&#x201D;&#x7684;&#x5177;&#x4F53;&#x7C7B;&#x578B;&#x6765;&#x9009;&#x62E9;&#x5230;&#x5E95;&#x8981;&#x8C03;&#x7528;&#x54EA;&#x4E2A;&#x7248;&#x672C;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x79F0;&#x4E3A;&#x201C;&#x8FD0;&#x884C;&#x65F6;&#x7ED1;&#x5B9A;&#x201D;&#xFF08;runtime binding&#xFF09;&#x6216;&#x8005;&#x53EB;&#x201C;&#x8FDF;&#x7ED1;&#x5B9A;&#x201D;&#xFF08;late-binding&#xFF09;&#x3002;<br>&#x4E0D;&#x8FC7;Java&#x7684;&#x865A;&#x65B9;&#x6CD5;&#x7684;&#x8FDF;&#x7ED1;&#x5B9A;&#x5177;&#x4F53;&#x5982;&#x4F55;&#x53BB;&#x9009;&#x62E9;&#x76EE;&#x6807;&#x662F;&#x5199;&#x6B7B;&#x5728;&#x8BED;&#x8A00;&#x89C4;&#x8303;&#x4E0E;JVM&#x7684;&#x5B9E;&#x73B0;&#x4E2D;&#x7684;&#xFF0C;&#x7528;&#x6237;&#x65E0;&#x6CD5;&#x5E72;&#x6D89;&#x9009;&#x62E9;&#x7684;&#x8FC7;&#x7A0B;&#x3002;&#x8FD9;&#x4F7F;&#x5F97;Java&#x63D0;&#x4F9B;&#x7684;&#x8FDF;&#x7ED1;&#x5B9A;&#x7F3A;&#x4E4F;&#x81EA;&#x7531;&#x5EA6;&#x3002;&#x5728;Java 7&#x5F00;&#x59CB;&#x63D0;&#x4F9B;<a href="http://jcp.org/en/jsr/detail?id=292" target="_blank">invokedynamic</a>&#x652F;&#x6301;&#x540E;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x7F16;&#x5199;&#x7A0B;&#x5E8F;&#x6765;&#x63A7;&#x5236;&#x8FDF;&#x7ED1;&#x5B9A;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x5F00;&#x59CB;&#x5BF9;&#x9009;&#x62E9;&#x8C03;&#x7528;&#x76EE;&#x6807;&#x62E5;&#x6709;&#x5B8C;&#x6574;&#x7684;&#x63A7;&#x5236;&#x6743;&#x3002;   </p>
+<p>Java&#x8BED;&#x8A00;&#x4E2D;&#xFF0C;&#x54EA;&#x4E9B;&#x65B9;&#x6CD5;&#x662F;&#x865A;&#x65B9;&#x6CD5;&#x5462;&#xFF1F;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x5168;&#x90E8;&#x90FD;&#x662F;&#x975E;&#x865A;&#x7684;&#xFF0C;&#x800C;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#x5219;&#x770B;&#x60C5;&#x51B5;&#x3002;<br>Java&#x8BED;&#x8A00;&#x89C4;&#x8303;&#x7B2C;&#x4E09;&#x7248;&#x8BF4;&#x660E;&#x4E86;&#x54EA;&#x4E9B;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#x4E0D;&#x662F;&#x865A;&#x65B9;&#x6CD5;&#xFF1A;<br><strong>Java Language Specification, 3rd &#x5199;&#x9053;</strong>  </p>
+<blockquote>
+<p><strong>8.4.3.3 final Methods</strong>   </p>
+<font color="red">A method can be declared **final** to prevent subclasses from overriding or hiding it.</font> It is a compile-time error to attempt to override or hide a final method.   
+<font color="red">A private method and all methods declared immediately within a final class (&#xA7;8.1.1.2) behave as if they are final, since it is impossible to override them.</font>  
+
+<p>It is a compile-time error for a final method to be declared abstract.  </p>
+</blockquote>
+<p>&#x884C;&#x4E3A;&#x5982;&#x540C;&#x201C;final&#x201D;&#x7684;&#x65B9;&#x6CD5;&#x90FD;&#x65E0;&#x6CD5;&#x8986;&#x5199;&#xFF0C;&#x4E5F;&#x5C31;&#x65E0;&#x6CD5;&#x8FDB;&#x884C;&#x5B50;&#x7C7B;&#x578B;&#x591A;&#x6001;&#xFF1B;&#x58F0;&#x660E;&#x4E3A;final&#x6216;private&#x7684;&#x65B9;&#x6CD5;&#x90FD;&#x88AB;&#x5C5E;&#x4E8E;&#x8FD9;&#x7C7B;&#x3002;&#x6240;&#x4EE5;&#x9664;&#x4E86;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x4E4B;&#x5916;&#xFF0C;&#x58F0;&#x660E;&#x4E3A;final&#x6216;&#x8005;private&#x7684;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#x4E5F;&#x662F;&#x975E;&#x865A;&#x65B9;&#x6CD5;&#x3002;&#x5176;&#x5B83;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#x90FD;&#x662F;&#x865A;&#x65B9;&#x6CD5;&#x3002; </p>
+<p>Java&#x8BED;&#x8A00;&#x89C4;&#x8303;&#x63A5;&#x7740;&#x63D0;&#x5230;&#xFF1A;<br><strong>Java Language Specification, 3rd &#x5199;&#x9053;</strong>  </p>
+<blockquote>
+<p><strong>8.4.3.3 final Methods</strong>  </p>
+<p>&#xFF08;... &#x7701;&#x7565;&#xFF09; </p>
+<p><font color="red">At run time, a machine-code generator or optimizer can &quot;inline&quot; the body of a final method, replacing an invocation of the method with the code in its body.</font> The inlining process must preserve the semantics of the method invocation. In particular, if the target of an instance method invocation is null, then a NullPointerException must be thrown even if the method is inlined. The compiler must ensure that the exception will be thrown at the correct point, so that the actual arguments to the method will be seen to have been evaluated in the correct order prior to the method invocation.   </p>
+<p>Consider the example: </p>
+<p>```java
+final class Point {<br>    int x, y;<br>    void move(int dx, int dy) { x += dx; y += dy; }<br>}<br>class Test {<br>    public static void main(String[] args) {<br>        Point[] p = new Point[100];<br>        for (int i = 0; i &lt; p.length; i++) {<br>            p[i] = new Point();<br>            p[i].move(i, p.length-1-i);<br>        }<br>    }<br>}  </p>
+<p>Here, inlining the method move of class Point in method main would transform the for loop to the form:   </p>
+<p>```java
+for (int i = 0; i &lt; p.length; i++) {<br>   p[i] = new Point();<br>   Point pi = p[i];<br>   int j = p.length-1-i;<br>   pi.x += i;<br>   pi.y += j;<br>}  </p>
+<p>The loop might then be subject to further optimizations. </p>
+<p>Such inlining cannot be done at compile time unless it can be guaranteed that Test and Point will always be recompiled together, so that whenever Point-and specifically its move method-changes, the code for Test.main will also be updated.</p>
+</blockquote>
+<p>&#x8FD9;&#x91CC;&#x63D0;&#x5230;&#x201C;final&#x65B9;&#x6CD5;&#x201D;&#x53EF;&#x4EE5;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x5F97;&#x5230;&#x5185;&#x8054;&#x3002;&#x5176;&#x5B9E;&#x6240;&#x6709;&#x975E;&#x865A;&#x65B9;&#x6CD5;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x90FD;&#x53EF;&#x4EE5;&#x5B89;&#x5168;&#x7684;&#x88AB;&#x5185;&#x8054;&#x3002;<br>&#x4E00;&#x4E2A;&#x4FDD;&#x5B88;&#x7684;JVM&#x53EF;&#x4EE5;&#x5982;&#x4E0A;&#x8FF0;&#x8BF4;&#x660E;&#x4E00;&#x6837;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x5BF9;&#x975E;&#x865A;&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x8FDB;&#x884C;&#x5185;&#x8054;&#x4F18;&#x5316;&#xFF1B;&#x800C;&#x4E00;&#x4E2A;&#x6FC0;&#x8FDB;&#x4F18;&#x5316;&#x7684;JVM&#x5219;&#x53EF;&#x4EE5;&#x66F4;&#x8FDB;&#x4E00;&#x6B65;&#xFF0C;&#x5C06;&#x6E90;&#x7801;&#x4E2D;&#x58F0;&#x660E;&#x4E3A;&#x865A;&#x65B9;&#x6CD5;&#x3001;&#x4F46;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x7684;&#x67D0;&#x4E2A;&#x65F6;&#x95F4;&#x70B9;&#x53EF;&#x4EE5;&#x8BC1;&#x660E;&#xFF08;&#x4F8B;&#x5982;&#x901A;&#x8FC7;<a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.117.2420&amp;rep=rep1&amp;type=pdf" target="_blank">&#x7C7B;&#x5C42;&#x6B21;&#x5206;&#x6790;&#xFF08;CHA&#xFF09;</a>&#xFF09;&#x8BE5;&#x65B9;&#x6CD5;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x53EF;&#x80FD;&#x7684;&#x8C03;&#x7528;&#x76EE;&#x6807;&#x65F6;&#xFF0C;&#x4ECD;&#x7136;&#x53EF;&#x4EE5;&#x5C06;&#x8C03;&#x7528;&#x76EE;&#x6807;&#x5185;&#x8054;&#x5230;&#x8C03;&#x7528;&#x8005;&#x4E2D;&#x3002;&#x73B0;&#x5728;&#x5728;&#x684C;&#x9762;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x7684;&#x4E3B;&#x6D41;&#x9AD8;&#x6027;&#x80FD;JVM&#xFF0C;&#x5982;Oracle (Sun) HotSpot&#x3001;IBM J9&#x3001;Oracle (BEA) JRockit&#x7B49;&#xFF0C;&#x90FD;&#x4F1A;&#x505A;&#x8FD9;&#x6837;&#x7684;&#x6FC0;&#x8FDB;&#x4F18;&#x5316;&#x3002;&#x56E0;&#x6B64;&#x5728;&#x5F00;&#x53D1;&#x684C;&#x9762;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x7AEF;Java&#x7A0B;&#x5E8F;&#x65F6;&#x6CA1;&#x6709;&#x5FC5;&#x8981;&#x4E3A;&#x4E86;&#x63D0;&#x5230;&#x6027;&#x80FD;&#x800C;&#x7279;&#x610F;&#x5C06;&#x65B9;&#x6CD5;&#x58F0;&#x660E;&#x4E3A;final&#x7684;&#x3002;  </p>
+<p>&#x5173;&#x4E8E;HotSpot VM&#x5BF9;final&#x7684;&#x5904;&#x7406;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="http://wikis.sun.com/display/HotSpotInternals/VirtualCalls" target="_blank">HotSpot Internals wiki&#x7684;Virtual Calls&#x4E00;&#x7BC7;</a>&#xFF1A;  </p>
+<blockquote>
+<p>It is legal for an invokevirtual bytecode to refer to a final method. A final method need not have a vtable slot allocated. This means that, after linking, an invokevirtual bytecode might in fact collapse into the equivalent of an invokestatic bytecode. The interpreter is prepared to do this.</p>
+</blockquote>
+<p>Anders Hejlsberg&#x66FE;&#x7ECF;&#x5728;&#x591A;&#x4E2A;&#x573A;&#x5408;&#x63D0;&#x5230;&#x865A;&#x65B9;&#x6CD5;&#x662F;&#x65E0;&#x6CD5;&#x5185;&#x8054;&#x7684;&#xFF08;&#x4F8B;&#x5982;&#x8FD9;&#x4E2A;Artima&#x7684;&#x8BBF;&#x8C08;&#xFF09;&#xFF1B;&#x786E;&#x5B9E;CLR&#x662F;&#x65E0;&#x6CD5;&#x5185;&#x8054;&#x4EFB;&#x4F55;&#x865A;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#xFF0C;&#x4F46;&#x90A3;&#x53EA;&#x662F;CLR&#x7684;&#x5B9E;&#x73B0;&#x9650;&#x5236;&#x800C;&#x5DF2;&#x3002;&#x8FD9;&#x70B9;&#x4E0A;&#x9AD8;&#x6027;&#x80FD;JVM&#x6BD4;CLR&#x8981;&#x5148;&#x8FDB;&#xFF08;&#x4E14;&#x590D;&#x6742;&#xFF09;&#x8BB8;&#x591A;&#x3002;   </p>
+<p>&#x6765;&#x770B;&#x770B;Oracle/Sun JDK&#x91CC;&#x7684;HotSpot VM&#x662F;&#x5982;&#x4F55;&#x505A;&#x521D;&#x6B65;&#x7684;&#x662F;&#x5426;&#x80FD;&#x9759;&#x6001;&#x7ED1;&#x5B9A;&#x7684;&#xFF1A;   </p>
+<pre><code class="lang-c++"><span class="hljs-keyword">bool</span> methodOopDesc::can_be_statically_bound() <span class="hljs-keyword">const</span> {  
+  <span class="hljs-keyword">if</span> (is_final_method())  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;  
+  <span class="hljs-keyword">return</span> vtable_index() == nonvirtual_vtable_index;  
+}
+</code></pre>
+<p>&#x4E5F;&#x5C31;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x67D0;&#x4E2A;Java&#x65B9;&#x6CD5;&#x662F;final&#x7684;&#x6216;&#x8005;&#x4E0D;&#x662F;&#x865A;&#x65B9;&#x6CD5;&#x7684;&#x8BDD;&#xFF0C;&#x5B83;&#x5C31;&#x53EF;&#x4EE5;&#x505A;&#x9759;&#x6001;&#x7ED1;&#x5B9A;&#x3002; </p>
+<hr>
+<p>Java&#x865A;&#x62DF;&#x673A;&#x89C4;&#x8303;&#x7B2C;&#x4E8C;&#x7248;&#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x56DB;&#x79CD;&#x4E0D;&#x540C;&#x7684;&#x5B57;&#x8282;&#x7801;&#x6307;&#x4EE4;&#x6765;&#x5904;&#x7406;Java&#x7A0B;&#x5E8F;&#x4E2D;&#x4E0D;&#x540C;&#x79CD;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x3002;&#x5305;&#x62EC;&#xFF0C;  </p>
+<ul>
+<li>invokestatic - &#x7528;&#x4E8E;&#x8C03;&#x7528;&#x7C7B;&#xFF08;&#x9759;&#x6001;&#xFF09;&#x65B9;&#x6CD5;   </li>
+<li>invokespecial - &#x7528;&#x4E8E;&#x8C03;&#x7528;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#xFF0C;&#x7279;&#x5316;&#x4E8E;super&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x3001;private&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x4E0E;&#x6784;&#x9020;&#x5668;&#x8C03;&#x7528;  </li>
+<li>invokevirtual - &#x7528;&#x4E8E;&#x8C03;&#x7528;&#x4E00;&#x822C;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#xFF08;&#x5305;&#x62EC;&#x58F0;&#x660E;&#x4E3A;final&#x4F46;&#x4E0D;&#x4E3A;private&#x7684;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#xFF09;  </li>
+<li>invokeinterface - &#x7528;&#x4E8E;&#x8C03;&#x7528;&#x63A5;&#x53E3;&#x65B9;&#x6CD5;   </li>
+</ul>
+<p>&#x5176;&#x4E2D;&#xFF0C;invokestatic&#x4E0E;invokespecial&#x8C03;&#x7528;&#x7684;&#x76EE;&#x6807;&#x5FC5;&#x7136;&#x662F;&#x53EF;&#x4EE5;&#x9759;&#x6001;&#x7ED1;&#x5B9A;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x90FD;&#x65E0;&#x6CD5;&#x53C2;&#x4E0E;&#x5B50;&#x7C7B;&#x578B;&#x591A;&#x6001;&#xFF1B;invokevirtual&#x4E0E;invokeinterface&#x7684;&#x5219;&#x4E00;&#x822C;&#x9700;&#x8981;&#x505A;&#x8FD0;&#x884C;&#x65F6;&#x7ED1;&#x5B9A;&#xFF0C;JVM&#x5B9E;&#x73B0;&#x53EF;&#x4EE5;&#x6709;&#x9009;&#x62E9;&#x7684;&#x6839;&#x636E;final&#x6216;&#x5B9E;&#x9645;&#x8FD0;&#x884C;&#x65F6;&#x7C7B;&#x5C42;&#x6B21;&#x6216;&#x7C7B;&#x578B;&#x53CD;&#x9988;&#x7B49;&#x4FE1;&#x606F;&#x8BD5;&#x56FE;&#x8FDB;&#x884C;&#x9759;&#x6001;&#x7ED1;&#x5B9A;&#x3002; </p>
+<p>=========================================================================== </p>
+<p>&#x90A3;&#x4E48;Java&#x4E2D;&#x7684;&#x5B9E;&#x4F8B;&#x6784;&#x9020;&#x5668;&#x662F;&#x4E0D;&#x662F;&#x201C;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x201D;&#x5462;&#xFF1F;&#x4ECE;Java&#x8BED;&#x8A00;&#x89C4;&#x8303;&#x4E2D;&#x7ED9;&#x51FA;&#x7684;&#x201C;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x201D;&#x7684;&#x5B9A;&#x4E49;&#x6765;&#x770B;&#xFF0C;&#x7B54;&#x6848;&#x662F;&#x201C;&#x5426;&#x201D;&#x2014;&#x2014;&#x9996;&#x5148;&#x4ECE;Java&#x8BED;&#x8A00;&#x89C4;&#x8303;&#x5BF9;&#x201C;&#x65B9;&#x6CD5;&#x201D;&#x7684;&#x5B9A;&#x4E49;&#x6765;&#x8BF4;&#xFF0C;&#x6784;&#x9020;&#x5668;&#x6839;&#x672C;&#x4E0D;&#x662F;&#x201C;&#x65B9;&#x6CD5;&#x201D;&#xFF1B;&#x5176;&#x6B21;&#xFF0C;&#x5B9E;&#x4F8B;&#x6784;&#x9020;&#x5668;&#x6709;&#x4E00;&#x4E2A;&#x9690;&#x5F0F;&#x53C2;&#x6570;&#xFF0C;&#x201C;this&#x201D;&#xFF0C;&#x5728;&#x5B9E;&#x4F8B;&#x6784;&#x9020;&#x5668;&#x4E2D;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x201C;this&#x201D;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x201C;this&#x201D;&#x8BBF;&#x95EE;&#x5230;&#x6B63;&#x5728;&#x521D;&#x59CB;&#x5316;&#x7684;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x7684;&#x6240;&#x6709;&#x5B9E;&#x4F8B;&#x6210;&#x5458;&#x3002;      </p>
+<p>Java&#x8BED;&#x8A00;&#x89C4;&#x8303;&#x4E2D;&#x5173;&#x4E8E;&#x6784;&#x9020;&#x5668;&#x7684;&#x8BF4;&#x660E;&#x4E2D;&#x63D0;&#x5230;&#xFF1A;<br><strong>Java Language Specification, 3rd &#x5199;&#x9053;</strong>  </p>
+<blockquote>
+<p>8.8 Constructor Declarations  </p>
+<p>A constructor is used in the creation of an object that is an instance of a class: </p>
+<p>&#xFF08;... &#x7701;&#x7565;&#xFF09; </p>
+<p><font color="red">Constructor declarations are not members. They are never inherited and therefore are not subject to hiding or overriding.<red>  </red></font></p>
+</blockquote>
+<p>&#x5B9E;&#x4F8B;&#x6784;&#x9020;&#x5668;&#x65E0;&#x6CD5;&#x88AB;&#x9690;&#x85CF;&#x6216;&#x8986;&#x5199;&#xFF0C;&#x4E0D;&#x53C2;&#x4E0E;&#x591A;&#x6001;&#xFF0C;&#x56E0;&#x800C;&#x53EF;&#x4EE5;&#x505A;&#x9759;&#x6001;&#x7ED1;&#x5B9A;&#x3002;&#x4ECE;&#x8FD9;&#x4E2A;&#x610F;&#x4E49;&#x4E0A;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x5B9E;&#x4F8B;&#x6784;&#x9020;&#x5668;&#x662F;&#x201C;&#x9759;&#x6001;&#x201D;&#x7684;&#xFF0C;&#x4F46;&#x8FD9;&#x79CD;&#x7528;&#x6CD5;&#x4E0E;Java&#x8BED;&#x8A00;&#x5B9A;&#x4E49;&#x7684;&#x201C;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x201D;&#x662F;&#x4E24;&#x7801;&#x4E8B;&#x3002;  </p>
+<p>&#x53E6;&#x5916;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;Java&#x8BED;&#x8A00;&#x4E2D;&#xFF0C;&#x5B9E;&#x4F8B;&#x6784;&#x9020;&#x5668;&#x53EA;&#x80FD;&#x5728;new&#x8868;&#x8FBE;&#x5F0F;&#xFF08;&#x6216;&#x522B;&#x7684;&#x6784;&#x9020;&#x5668;&#xFF09;&#x4E2D;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x4E0D;&#x80FD;&#x901A;&#x8FC7;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x8868;&#x8FBE;&#x5F0F;&#x6765;&#x8C03;&#x7528;&#x3002;new&#x8868;&#x8FBE;&#x5F0F;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x6574;&#x4F53;&#x4FDD;&#x8BC1;&#x4E86;&#x5BF9;&#x8C61;&#x7684;&#x521B;&#x5EFA;&#x4E0E;&#x521D;&#x59CB;&#x5316;&#x662F;&#x6253;&#x5305;&#x5728;&#x4E00;&#x8D77;&#x8FDB;&#x884C;&#x7684;&#xFF0C;&#x4E0D;&#x80FD;&#x5206;&#x5F00;&#x8FDB;&#x884C;&#xFF1B;&#x4F46;&#x5B9E;&#x4F8B;&#x6784;&#x9020;&#x5668;&#x53EA;&#x8D1F;&#x8D23;&#x5BF9;&#x8C61;&#x521D;&#x59CB;&#x5316;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x201C;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x201D;&#x7684;&#x90E8;&#x5206;&#x662F;&#x7531;new&#x8868;&#x8FBE;&#x5F0F;&#x672C;&#x8EAB;&#x4FDD;&#x8BC1;&#x7684;&#x3002;  </p>
+<p>&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x4E0B;&#x9762;&#x7684;Java&#x4EE3;&#x7801; </p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ConstructorDemo</span> </span>{  
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> value;  
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">ConstructorDemo</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i, Object o)</span> </span>{  
+        <span class="hljs-keyword">this</span>.value = i;  
+    }  
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{  
+        ConstructorDemo demo = <span class="hljs-keyword">new</span> ConstructorDemo(<span class="hljs-number">2</span>, args);  
+    }  
+}
+</code></pre>
+<p>&#x88AB;&#x7F16;&#x8BD1;&#x4E3A;class&#x6587;&#x4EF6;&#x540E;&#xFF0C;&#x5B9E;&#x4F8B;&#x6784;&#x9020;&#x5668;&#x4E0E;main()&#x65B9;&#x6CD5;&#x7684;&#x5185;&#x5BB9;&#x5206;&#x522B;&#x4E3A;&#xFF1A; </p>
+<pre><code class="lang-java">public ConstructorDemo(int, java.lang.Object);  
+  Code:  
+   Stack=2, Locals=3, Args_size=3  
+   0:   aload_0  
+   1:   invokespecial   #1; //Method java/lang/Object.&quot;&lt;init&gt;&quot;:()V  
+   4:   aload_0  
+   5:   iload_1  
+   6:   putfield        #2; //Field value:I  
+   9:   return  
+
+public static void main(java.lang.String[]);  
+  Code:  
+   Stack=4, Locals=2, Args_size=1  
+   0:   new     #3; //class ConstructorDemo  
+   3:   dup  
+   4:   iconst_2  
+   5:   aload_0  
+   6:   invokespecial   #4; //Method &quot;&lt;init&gt;&quot;:(ILjava/lang/Object;)V  
+   9:   astore_1  
+   10:  return
+</code></pre>
+<p>&#x5148;&#x4ECE;main()&#x65B9;&#x6CD5;&#x5F00;&#x59CB;&#x770B;&#x3002;<br>&#x7B2C;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#x662F;new&#xFF0C;&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x51FA;ConstructorDemo&#x7C7B;&#x578B;&#x7684;&#x4E00;&#x4E2A;&#x7A7A;&#x5BF9;&#x8C61;&#xFF0C;&#x6267;&#x884C;&#x8FC7;&#x540E;&#x6307;&#x5411;&#x8BE5;&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;&#x88AB;&#x538B;&#x5230;&#x64CD;&#x4F5C;&#x6570;&#x6808;&#x4E0A;&#x3002;<br>&#x7B2C;&#x4E8C;&#x6761;&#x6307;&#x4EE4;&#x662F;dup&#xFF0C;&#x5C06;&#x64CD;&#x4F5C;&#x6570;&#x6808;&#x9876;&#x7684;&#x503C;&#x590D;&#x5236;&#x4E00;&#x4EFD;&#x538B;&#x56DE;&#x5230;&#x6808;&#x9876;&#xFF1B;&#x5176;&#x4E2D;dup&#x51FA;&#x6765;&#x7684;&#x4E00;&#x4EFD;&#x7528;&#x4E8E;&#x4F5C;&#x4E3A;&#x9690;&#x5F0F;&#x53C2;&#x6570;&#x4F20;&#x5230;&#x5B9E;&#x4F8B;&#x6784;&#x9020;&#x5668;&#x91CC;&#x53BB;&#xFF08;&#x5BF9;&#x5E94;&#x540E;&#x9762;&#x7684;invokespecial&#xFF09;&#xFF0C;&#x539F;&#x672C;&#x7684;&#x4E00;&#x4EFD;&#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x5230;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x53BB;&#xFF08;&#x5BF9;&#x5E94;&#x540E;&#x9762;&#x7684;astore_1&#xFF09;&#x3002;<br>&#x7B2C;&#x4E09;&#x6761;&#x6307;&#x4EE4;&#x662F;iconst_2&#xFF0C;&#x5C06;&#x5E38;&#x91CF;2&#x538B;&#x5230;&#x64CD;&#x4F5C;&#x6570;&#x6808;&#x4E0A;&#xFF0C;&#x4F5C;&#x4E3A;ConstructorDemo&#x5B9E;&#x4F8B;&#x6784;&#x9020;&#x5668;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x663E;&#x5F0F;&#x53C2;&#x6570;&#x3002;<br>&#x7B2C;&#x56DB;&#x6761;&#x6307;&#x4EE4;&#x662F;aload_0&#xFF0C;&#x5C06;main()&#x65B9;&#x6CD5;&#x7684;&#x53C2;&#x6570;args&#x4F5C;&#x4E3A;ConstructorDemo&#x5B9E;&#x4F8B;&#x6784;&#x9020;&#x5668;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x663E;&#x5F0F;&#x53C2;&#x6570;&#x3002;<br>&#x7B2C;&#x4E94;&#x6761;&#x6307;&#x4EE4;&#x662F;invokespecial&#xFF0C;&#x8C03;&#x7528;ConstructorDemo&#x5B9E;&#x4F8B;&#x6784;&#x9020;&#x5668;&#x3002;&#x518D;&#x6B21;&#x7559;&#x610F;&#xFF0C;&#x524D;&#x9762;&#x5DF2;&#x7ECF;&#x4F20;&#x4E86;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5206;&#x522B;&#x662F;new&#x51FA;&#x6765;&#x7684;&#x5B9E;&#x4F8B;&#x7684;&#x5F15;&#x7528;&#x3001;&#x5E38;&#x91CF;2&#x4E0E;main()&#x7684;&#x53C2;&#x6570;args&#x3002;&#x8BE5;&#x6307;&#x4EE4;&#x6267;&#x884C;&#x8FC7;&#x540E;&#xFF0C;&#x64CD;&#x4F5C;&#x6570;&#x6808;&#x9876;&#x5C31;&#x53EA;&#x5269;&#x4E0B;dup&#x524D;&#x901A;&#x8FC7;new&#x5F97;&#x5230;&#x7684;&#x5F15;&#x7528;&#x3002;<br>&#x7B2C;6&#x6761;&#x6307;&#x4EE4;&#x662F;astore_1&#xFF0C;&#x5C06;&#x64CD;&#x4F5C;&#x6570;&#x6808;&#x9876;&#x7684;&#x5F15;&#x7528;&#x4FDD;&#x5B58;&#x5230;&#x5C40;&#x90E8;&#x53D8;&#x91CF;1&#x4E2D;&#x3002;&#x6267;&#x884C;&#x8FC7;&#x540E;&#x64CD;&#x4F5C;&#x6570;&#x6808;&#x7A7A;&#x4E86;&#x3002;<br>&#x6700;&#x540E;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#x662F;return&#xFF0C;&#x7ED3;&#x675F;main()&#x65B9;&#x6CD5;&#x7684;&#x6267;&#x884C;&#x5E76;&#x8FD4;&#x56DE;&#x3002;  </p>
+<p>&#x7136;&#x540E;&#x4ECE;ConstructorDemo&#x7684;&#x5B9E;&#x4F8B;&#x6784;&#x9020;&#x5668;&#x6765;&#x770B;&#x3002;<br>&#x7B2C;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#x662F;aload_0&#xFF0C;&#x5C06;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF08;&#x4E0D;&#x7BA1;&#x662F;&#x9690;&#x5F0F;&#x8FD8;&#x662F;&#x663E;&#x5F0F;&#x53C2;&#x6570;&#xFF09;&#x538B;&#x5230;&#x64CD;&#x4F5C;&#x6570;&#x6808;&#x4E0A;&#x3002;&#x4ECE;main()&#x7684;&#x8C03;&#x7528;&#x5E8F;&#x5217;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x521A;new&#x51FA;&#x6765;&#x7684;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x7684;&#x5F15;&#x7528;&#xFF0C;&#x5BF9;&#x8FD9;&#x4E2A;&#x6784;&#x9020;&#x5668;&#x6765;&#x8BF4;&#x4E5F;&#x5C31;&#x662F;&#x201C;this&#x201D;&#x3002;<br>&#x7B2C;&#x4E8C;&#x6761;&#x6307;&#x4EE4;&#x662F;invokespecial&#xFF0C;&#x8C03;&#x7528;Object&#x7684;&#x5B9E;&#x4F8B;&#x6784;&#x9020;&#x5668;&#x3002;&#x524D;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#x7684;&#x201C;this&#x201D;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x8C03;&#x7528;&#x7684;&#x53C2;&#x6570;&#x3002;&#x6267;&#x884C;&#x8FC7;&#x540E;&#x64CD;&#x4F5C;&#x6570;&#x6808;&#x5C31;&#x7A7A;&#x4E86;&#x3002;<br>&#x7B2C;&#x4E09;&#x6761;&#x6307;&#x4EE4;&#x53C8;&#x662F;aload_0&#xFF0C;&#x518D;&#x6B21;&#x5C06;&#x201C;this&#x201D;&#x538B;&#x5230;&#x64CD;&#x4F5C;&#x6570;&#x6808;&#x4E0A;&#x3002;<br>&#x7B2C;&#x56DB;&#x6761;&#x6307;&#x4EE4;&#x662F;iload_1&#xFF0C;&#x5C06;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x538B;&#x5230;&#x64CD;&#x4F5C;&#x6570;&#x6808;&#x4E0A;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;i&#x3002;<br>&#x7B2C;&#x4E94;&#x6761;&#x6307;&#x4EE4;&#x662F;putfield&#xFF0C;&#x5C06;i&#x8D4B;&#x503C;&#x7ED9;this.value&#x3002;&#x6267;&#x884C;&#x8FC7;&#x540E;&#x64CD;&#x4F5C;&#x6570;&#x6808;&#x53C8;&#x7A7A;&#x4E86;&#x3002;<br>&#x6700;&#x540E;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#x662F;return&#xFF0C;&#x7ED3;&#x675F;&#x8BE5;&#x5B9E;&#x4F8B;&#x6784;&#x9020;&#x5668;&#x7684;&#x6267;&#x884C;&#x5E76;&#x8FD4;&#x56DE;&#x3002;   </p>
+<p>&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x7684;&#x6CE8;&#x610F;&#x70B9;&#x5728;&#x4E8E;&#xFF1A;<br>1&#x3001;Java&#x7684;&#x5B9E;&#x4F8B;&#x6784;&#x9020;&#x5668;&#x53EA;&#x8D1F;&#x8D23;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x4E0D;&#x8D1F;&#x8D23;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#xFF1B;Java&#x865A;&#x62DF;&#x673A;&#x7684;&#x5B57;&#x8282;&#x7801;&#x6307;&#x4EE4;&#x7684;&#x8BBE;&#x8BA1;&#x4E5F;&#x53CD;&#x6620;&#x4E86;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;new&#x6307;&#x4EE4;&#x4E13;&#x95E8;&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#xFF0C;&#x800C;&#x8C03;&#x7528;&#x5B9E;&#x4F8B;&#x6784;&#x9020;&#x5668;&#x5219;&#x4F7F;&#x7528;invokespecial&#x6307;&#x4EE4;&#x3002;<br>2&#x3001;&#x201C;this&#x201D;&#x662F;&#x4F5C;&#x4E3A;&#x5B9E;&#x4F8B;&#x6784;&#x9020;&#x5668;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5B9E;&#x9645;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x7684;&#x3002;   </p>
+<p>&#x76F8;&#x4FE1;&#x80FD;&#x533A;&#x5206;&#x201C;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x201D;&#x4E0E;&#x201C;&#x9759;&#x6001;&#x7ED1;&#x5B9A;&#x201D;&#x4E2D;&#x7684;&#x201C;&#x9759;&#x6001;&#x201D;&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x4E0D;&#x4F1A;&#x518D;&#x5C06;Java&#x4E2D;&#x7684;&#x5B9E;&#x4F8B;&#x6784;&#x9020;&#x5668;&#x770B;&#x4F5C;&#x662F;&#x201C;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x201D;&#x4E86;&#x3002;  </p>
+<div id="gitalk-container"></div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="2017-01-04-java-interface-and-abstract-class.html" class="navigation navigation-prev " aria-label="Previous page: interface与abstract class">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="2017-03-17-thinking-in-java-record.html" class="navigation navigation-next " aria-label="Next page: 《thinking in JAVA》片断记录">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"layout":"post","title":"构造器是静态方法吗？","category":["编程语言"],"tags":[],"level":"1.2.3","depth":2,"next":{"title":"《thinking in JAVA》片断记录","level":"1.2.4","depth":2,"path":"Grammar/2017-03-17-thinking-in-java-record.md","ref":"Grammar/2017-03-17-thinking-in-java-record.md","articles":[]},"previous":{"title":"interface与abstract class","level":"1.2.2","depth":2,"path":"Grammar/2017-01-04-java-interface-and-abstract-class.md","ref":"Grammar/2017-01-04-java-interface-and-abstract-class.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","katex-plus","alerts","mygitalk","github","github-buttons","splitter","-sharing","sharing-plus","donate","copy-code-button","anchor-navigation-ex","sectionx","click-reveal"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/windmissing/java_notes"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"http://windmissing.github.io/images/2020/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"http://windmissing.github.io/images/2020/weixin.jpg","wechatText":"微信打赏"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"katex-plus":{},"alerts":{},"github-buttons":{"repo":"windmissing/java_notes","types":["star","watch","fork"],"size":"small"},"copy-code-button":{},"mygitalk":{"flipMoveOptions":{},"clientID":"602222c200df165c291a","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["windmissing"],"createIssueManually":false,"distractionFreeMode":false,"repo":"java_notes","owner":"windmissing","enableHotKey":true,"clientSecret":"8364f31e4864294d7d0aaede6a4271314733be85","pagerDirection":"last","labels":["Gitalk"]},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"windmissing","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"3.2.3"},"file":{"path":"Grammar/2017-04-25-is-contructor-a-static-function.md","mtime":"2020-11-08T23:33:31.368Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-08T23:34:57.551Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+        
+    
+        
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mygitalk/mygitalk.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-click-reveal/click_reveal.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

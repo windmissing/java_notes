@@ -1,0 +1,801 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>《thinking in JAVA》片断记录 (四) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="windmissing">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex-plus/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-click-reveal/click_reveal.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2017-04-18-thinking-in-java-record-5.html" />
+    
+    
+    <link rel="prev" href="2017-03-23-thinking-in-java-record-3.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"windmissing/java_notes","types":["star","watch","fork"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Grammar
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="2017-01-03-java-extends-and-implement.html">
+            
+                <a href="2017-01-03-java-extends-and-implement.html">
+            
+                    
+                    extends与implement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="2017-01-04-java-interface-and-abstract-class.html">
+            
+                <a href="2017-01-04-java-interface-and-abstract-class.html">
+            
+                    
+                    interface与abstract class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="2017-04-25-is-contructor-a-static-function.html">
+            
+                <a href="2017-04-25-is-contructor-a-static-function.html">
+            
+                    
+                    构造器是静态方法吗？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="2017-03-17-thinking-in-java-record.html">
+            
+                <a href="2017-03-17-thinking-in-java-record.html">
+            
+                    
+                    《thinking in JAVA》片断记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="2017-03-23-thinking-in-java-record-2.html">
+            
+                <a href="2017-03-23-thinking-in-java-record-2.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (二)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="2017-03-23-thinking-in-java-record-3.html">
+            
+                <a href="2017-03-23-thinking-in-java-record-3.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (三)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.7" data-path="2017-04-12-thinking-in-java-record-4.html">
+            
+                <a href="2017-04-12-thinking-in-java-record-4.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (四)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="2017-04-18-thinking-in-java-record-5.html">
+            
+                <a href="2017-04-18-thinking-in-java-record-5.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (五)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="2017-04-27-thinking-in-java-record-6.html">
+            
+                <a href="2017-04-27-thinking-in-java-record-6.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (六)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="2017-05-04-thinking-in-java-record-7.html">
+            
+                <a href="2017-05-04-thinking-in-java-record-7.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (七)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="2017-05-26-thinking-in-java-record-8.html">
+            
+                <a href="2017-05-26-thinking-in-java-record-8.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (八)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="2017-05-27-thinking-in-java-record-9.html">
+            
+                <a href="2017-05-27-thinking-in-java-record-9.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (九)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="2017-05-28-thinking-in-java-record-10.html">
+            
+                <a href="2017-05-28-thinking-in-java-record-10.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (十)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="2017-05-29-thinking-in-java-record-11.html">
+            
+                <a href="2017-05-29-thinking-in-java-record-11.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (十一)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="2017-05-30-thinking-in-java-record-12.html">
+            
+                <a href="2017-05-30-thinking-in-java-record-12.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (十二)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="2017-08-01-thinking-in-java-record-13.html">
+            
+                <a href="2017-08-01-thinking-in-java-record-13.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (十三)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="2017-08-03-thinking-in-java-record-14.html">
+            
+                <a href="2017-08-03-thinking-in-java-record-14.html">
+            
+                    
+                    《thinking in JAVA》片断记录 (十四)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    设计模型
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../DesignPattern/2016-08-26-java-singleton.html">
+            
+                <a href="../DesignPattern/2016-08-26-java-singleton.html">
+            
+                    
+                    【转】JAVA设计模式之单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../DesignPattern/2016-09-30-adapter-java.html">
+            
+                <a href="../DesignPattern/2016-09-30-adapter-java.html">
+            
+                    
+                    JAVA设计模式之适配器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../DesignPattern/2016-10-08-java-facade.html">
+            
+                <a href="../DesignPattern/2016-10-08-java-facade.html">
+            
+                    
+                    JAVA设计模之外观模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../DesignPattern/2016-10-09-java-observer.html">
+            
+                <a href="../DesignPattern/2016-10-09-java-observer.html">
+            
+                    
+                    JAVA设计模之观察者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Libs
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Libs/2017-02-15-java-jackson.html">
+            
+                <a href="../Libs/2017-02-15-java-jackson.html">
+            
+                    
+                    JAVA json解析工具 - Jackson
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Framework
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Framework/2016-08-17-SpringMVC-introduction.html">
+            
+                <a href="../Framework/2016-08-17-SpringMVC-introduction.html">
+            
+                    
+                    SpringMVC处理请求的流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Framework/2016-08-23-sprint-ioc.html">
+            
+                <a href="../Framework/2016-08-23-sprint-ioc.html">
+            
+                    
+                    spring framework中的IOC技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    从JAVA到C++
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Java2Cpp/2017-03-13-from-java-to-c-c++.html">
+            
+                <a href="../Java2Cpp/2017-03-13-from-java-to-c-c++.html">
+            
+                    
+                    从JAVA到C++ --- 快速上手篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Java2Cpp/2017-03-14-java-to-cpp-on-memory.html">
+            
+                <a href="../Java2Cpp/2017-03-14-java-to-cpp-on-memory.html">
+            
+                    
+                    从JAVA到C++（一） - 内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Java2Cpp/2017-03-20-memory-management-in-java.html">
+            
+                <a href="../Java2Cpp/2017-03-20-memory-management-in-java.html">
+            
+                    
+                    JAVA内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >《thinking in JAVA》片断记录 (四)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><ul><li><span class="title-icon "></span><a href="#&#x6807;&#x7B7E;"><b>1.1.1. </b>&#x6807;&#x7B7E;</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h4 id="foreach"><a name="foreach" class="anchor-navigation-ex-anchor" href="#foreach"><i class="fa fa-link" aria-hidden="true"></i></a>foreach</h4>
+<p>foreach&#x8BED;&#x6CD5;&#xFF0C;&#x4E0D;&#x5FC5;&#x521B;&#x5EFA;int&#x53D8;&#x91CF;&#x53BB;&#x5BF9;&#x7531;&#x8BBF;&#x95EE;&#x9879;&#x6784;&#x6210;&#x7684;&#x5E8F;&#x5217;&#x8FDB;&#x884C;&#x8BA1;&#x6570;&#xFF0C;foreach&#x81EA;&#x52A8;&#x4EA7;&#x751F;&#x6BCF;&#x4E00;&#x9879;&#x3002;</p>
+<h2 id=""><!-- more --></h2>
+<h4 id="goto"><a name="goto" class="anchor-navigation-ex-anchor" href="#goto"><i class="fa fa-link" aria-hidden="true"></i></a>goto</h4>
+<p>JAVA&#x7F16;&#x8BD1;&#x5668;&#x751F;&#x6210;&#x5B83;&#x81EA;&#x5DF1;&#x7684;&#x201C;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x201D;&#xFF0C;&#x8FD9;&#x4E2A;&#x4EE3;&#x7801;&#x8FD0;&#x884C;&#x5728;JAVA&#x865A;&#x62DF;&#x673A;&#x4E0A;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x8FD0;&#x884C;&#x5728;CPU&#x786C;&#x4EF6;&#x4E0A;&#x3002;<br>JAVA&#x6CA1;&#x6709;goto&#xFF0C;&#x4F46;&#x6709;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;&#x7684;&#x673A;&#x5236;&#xFF1A;&#x6807;&#x7B7E;&#x3002;</p>
+<hr>
+<h3 id="&#x6807;&#x7B7E;"><a name="&#x6807;&#x7B7E;" class="anchor-navigation-ex-anchor" href="#&#x6807;&#x7B7E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. &#x6807;&#x7B7E;</h3>
+<p><strong>&#x6807;&#x7B7E;&#x8D77;&#x4F5C;&#x7528;&#x7684;&#x552F;&#x4E00;&#x5730;&#x65B9;&#x662F;&#x521A;&#x597D;&#x5728;&#x8FED;&#x4EE3;&#x8BED;&#x53E5;&#x4E4B;&#x524D;&#x3002;</strong><br><strong>&#x5728;&#x8FED;&#x4EE3;&#x4E4B;&#x524D;&#x8BBE;&#x7F6E;&#x6807;&#x7B7E;&#x7684;&#x552F;&#x4E00;&#x7406;&#x7531;&#x662F;&#xFF1A;&#x6709;&#x591A;&#x5C42;&#x8FED;&#x4EE3;&#x5B58;&#x5728;&#xFF0C;&#x60F3;&#x4ECE;&#x591A;&#x5C42;&#x8FED;&#x4EE3;&#x4E2D;break&#x6216;continue&#x3002;</strong><br>&#x4E66;&#x4E0A;&#x7684;&#x539F;&#x8BDD;&#x8BB2;&#x7684;&#x6709;&#x70B9;&#x5947;&#x602A;&#x3002;&#x4EE5;&#x4E0B;&#x662F;&#x6211;&#x7684;&#x7406;&#x89E3;&#xFF1A;<br><em>break&#x548C;continue&#x53EA;&#x662F;&#x7ED3;&#x675F;&#x6216;&#x7EE7;&#x7EED;&#x201C;&#x5F53;&#x524D;&#x201D;&#x5FAA;&#x73AF;&#xFF0C;&#x5F53;&#x4E24;&#x5C42;&#x53CA;&#x4EE5;&#x4E0A;&#x7684;&#x5FAA;&#x73AF;&#x5D4C;&#x5957;&#x65F6;&#x8FD9;&#x4E24;&#x4E2A;&#x5173;&#x952E;&#x5B57;&#x7684;&#x4F7F;&#x7528;&#x5C31;&#x4F1A;&#x6BD4;&#x8F83;&#x7E41;&#x7410;&#xFF0C;&#x6807;&#x7B7E;&#x662F;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x8FD9;&#x65B9;&#x9762;&#x7684;&#x4E0D;&#x8DB3;&#x3002;</em><br>&#x4E3E;&#x4F8B;&#xFF1A;  </p>
+<pre><code class="lang-java">label1:
+outer-iteration{
+    inner-interation {
+        <span class="hljs-comment">//...</span>
+        <span class="hljs-keyword">break</span>; <span class="hljs-comment">// (1)</span>
+        <span class="hljs-comment">//...</span>
+        <span class="hljs-keyword">continue</span>; <span class="hljs-comment">//(2)</span>
+        <span class="hljs-comment">//...</span>
+        <span class="hljs-keyword">continue</span> label1; <span class="hljs-comment">// (3)</span>
+        <span class="hljs-comment">//...</span>
+        <span class="hljs-keyword">break</span> label1; <span class="hljs-comment">// (4)</span>
+    }
+}
+</code></pre>
+<p>&#xFF08;1&#xFF09;&#x7ED3;&#x675F;&#x5185;&#x90E8;&#x5FAA;&#x73AF;&#xFF0C;&#x7EE7;&#x7EED;&#x5916;&#x90E8;&#x5FAA;&#x73AF;
+&#xFF08;2&#xFF09;&#x7EE7;&#x7EED;&#x5185;&#x90E8;&#x5FAA;&#x73AF;
+&#xFF08;3&#xFF09;&#x8F6C;&#x5230;label1&#xFF0C;&#x7EE7;&#x7EED;&#x540E;&#x9762;&#x7684;&#x5FAA;&#x73AF;
+&#xFF08;4&#xFF09;&#x8F6C;&#x5230;label1&#xFF0C;&#x7ED3;&#x675F;&#x540E;&#x9762;&#x7684;&#x5FAA;&#x73AF;</p>
+<div id="gitalk-container"></div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="2017-03-23-thinking-in-java-record-3.html" class="navigation navigation-prev " aria-label="Previous page: 《thinking in JAVA》片断记录 (三)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="2017-04-18-thinking-in-java-record-5.html" class="navigation navigation-next " aria-label="Next page: 《thinking in JAVA》片断记录 (五)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"layout":"post","title":"《thinking in JAVA》片断记录 (四)","category":["读书笔记"],"tags":[],"level":"1.2.7","depth":2,"next":{"title":"《thinking in JAVA》片断记录 (五)","level":"1.2.8","depth":2,"path":"Grammar/2017-04-18-thinking-in-java-record-5.md","ref":"Grammar/2017-04-18-thinking-in-java-record-5.md","articles":[]},"previous":{"title":"《thinking in JAVA》片断记录 (三)","level":"1.2.6","depth":2,"path":"Grammar/2017-03-23-thinking-in-java-record-3.md","ref":"Grammar/2017-03-23-thinking-in-java-record-3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","katex-plus","alerts","mygitalk","github","github-buttons","splitter","-sharing","sharing-plus","donate","copy-code-button","anchor-navigation-ex","sectionx","click-reveal"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/windmissing/java_notes"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"http://windmissing.github.io/images/2020/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"http://windmissing.github.io/images/2020/weixin.jpg","wechatText":"微信打赏"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"katex-plus":{},"alerts":{},"github-buttons":{"repo":"windmissing/java_notes","types":["star","watch","fork"],"size":"small"},"copy-code-button":{},"mygitalk":{"flipMoveOptions":{},"clientID":"602222c200df165c291a","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["windmissing"],"createIssueManually":false,"distractionFreeMode":false,"repo":"java_notes","owner":"windmissing","enableHotKey":true,"clientSecret":"8364f31e4864294d7d0aaede6a4271314733be85","pagerDirection":"last","labels":["Gitalk"]},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"windmissing","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"3.2.3"},"file":{"path":"Grammar/2017-04-12-thinking-in-java-record-4.md","mtime":"2020-11-08T23:33:31.368Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-08T23:34:57.551Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+        
+    
+        
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mygitalk/mygitalk.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-click-reveal/click_reveal.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
