@@ -28,6 +28,7 @@
     * [JAVA json解析工具 - Jackson](Libs/2017-02-15-java-jackson.md)
 * Framework
     * [SpringMVC处理请求的流程](Framework/2016-08-17-SpringMVC-introduction.md)
+    * [spring framework中的IOC技术](Framework/2016-08-23-sprint-ioc.md)
 * 从JAVA到C++
     * [从JAVA到C++ --- 快速上手篇](Java2Cpp/2017-03-13-from-java-to-c-c++.md)
     * [从JAVA到C++（一） - 内存管理](Java2Cpp/2017-03-14-java-to-cpp-on-memory.md)
